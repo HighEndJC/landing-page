@@ -1,11 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'New Zen', system-ui, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  /* font-weight: 400; */
 
-  color-scheme: light dark;
+  /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,17 +25,11 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -52,9 +46,161 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+} */
+
+/* Header.jsx */
+
+.header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8A2BE299;
+    height: 15vh;
+  }
+
+  .social-icons {
+    display: flex;
+  }
+  
+  /* HeroBanner.jsx */
+
+  .hero-banner {
+  }
+  
+  #banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+  }
+  
+  /* MissionStatement.jsx */
+
+  .mission-statement {
+    display: flex;
+    position: relative;
+    background-color: #00008B99;
+    color: white;
+    /* width: 100%; */
+    /* height: 20vh; */
+    justify-content: center;
+    align-items: center;
+    font-family: 'New Zen', sans-serif;
+  }
+
+  /* Phone Size */
+@media only screen and (max-width: 576px) {
+  #react-container {
+    width: 100%; 
+  }
+
+  .header {
+    padding: 3rem;
+  }
+
+  .logo-large {
+    display: none;
+  }
+
+  .logo-small {
+    height: 3rem;
+  }
+
+  .logo-medium {
+    display: none;
+  }
+
+.social-icons i {
+    color: black;
+    margin-left: .75rem;
+    cursor: pointer;
+  }
+
+  #banner-image {
+    object-fit: cover;
+    object-position: 10% 0%;
+  }
+
+  #mission {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 2rem;
+  }
 }
 
-@media (prefers-color-scheme: light) {
+/* Tablet Size */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+
+  .header {
+    padding: 3rem;
+  }
+
+
+   .logo-large {
+    display: none;
+  }
+
+  .logo-small {
+    display: none;
+  }
+
+  .logo-medium {
+    display: flex;
+    height: 4rem;
+    position: relative;
+    align-items: center;
+  }
+
+  .social-icons i {
+    color: black;
+    margin-left: 2rem;
+    cursor: pointer;
+  }
+
+  #mission {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 2rem;
+  }
+}
+
+/* Desktop Size */
+@media only screen and (min-width: 769px) {
+  .header {
+    padding: 5rem;
+    
+  }
+  
+  .logo-large {
+    display: flex;
+    height: 4rem;
+    position: relative;
+    align-items: center;
+  }
+
+  .logo-small {
+    display: none;
+  }
+
+  .logo-medium {
+    display: none;
+  }
+
+  .social-icons i {
+    color: black;
+    margin-left: 2rem;
+    cursor: pointer;
+  }
+
+  #mission {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem;
+  }
+}
+
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -65,4 +211,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
